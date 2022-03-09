@@ -1,0 +1,1 @@
+# testing_rabota_by_pytest
