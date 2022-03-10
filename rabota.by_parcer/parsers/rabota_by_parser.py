@@ -57,3 +57,13 @@ class RabotaByParser:
                 search_word_count += 1
         return search_word_count
 
+    @staticmethod
+    def get_header_of_page_with_searched_word(html: str) -> str:
+        """Receives a html of page and returns text of header tag, if this tag is available
+
+        """
+        soup = BeautifulSoup(html, 'html5lib')
+        searching_result_text = soup.find('h1', class_='bloko-header-section-3').text
+        return searching_result_text
+
+

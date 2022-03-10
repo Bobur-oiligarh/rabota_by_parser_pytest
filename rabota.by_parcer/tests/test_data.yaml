@@ -1,11 +1,10 @@
-general:
+test_connection_to_site_rabota_by:
+  url: "https://rabota.by/"
   headers:
     user-agent: f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 
-test_connection_to_site_rabota_by:
-  url: "https://rabota.by/"
-
-test_searched_word_not_exict_in_rabota_by_site:
+test_searched_word_not_exist_in_rabota_by_site:
   word: "shotgun"
-  url: "https://rabota.by/search/vacancy?area=16&fromSearchLine=true&text=shotgun"
-
+  url: "https://rabota.by/search/vacancy?area=16&fromSearchLine=true&text="
+  headers:
+    user-agent: f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
