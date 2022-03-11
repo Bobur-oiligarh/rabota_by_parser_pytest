@@ -1,7 +1,12 @@
+"""
+The main script. Gets Http request to https://rabota.by and searches vacancies by "python" word
+and counts "search_words" occurance in these vacancies.
+"""
 from clients.http_client import HttpClient
 from parsers.rabota_by_parser import RabotaByParser
 
-rabota_by_url = "https://rabota.by/search/vacancy?clusters=true&area=16&ored_clusters=true&enable_snippets=true&salary=&text=python"
+rabota_by_url = "https://rabota.by/search/vacancy?clusters=true&area=16&ored_clusters=true&enable_snippets=true" \
+                "&salary=&text=python "
 base_url = "https://rabota.by"
 default_headers = {"user-agent": f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "}
 http_client = HttpClient()
@@ -28,4 +33,3 @@ if __name__ == '__main__':
                 else:
                     output[search_word] += word_occurance_count
 
-    print(output)
